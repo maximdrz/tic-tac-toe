@@ -13,23 +13,31 @@
 </head>
 <body>
     <div class="choiceButtonBox" id="choiceButtonBox">
-        <button class="choiceX choiceStage" id="choiceX">X</button>
-        <button class="choiceO choiceStage" id="choiceO">O</button>
+        <button class="choiceX turnedOn btnChoice" id="choiceX">X</button>
+        <button class="choiceO turnedOn btnChoice" id="choiceO">O</button>
     </div>
     <div class="board" id="board">
-        <div class="cell choiceStage" id="cell1"></div>
-        <div class="cell choiceStage" id="cell2"></div>
-        <div class="cell choiceStage" id="cell3"></div>
-        <div class="cell choiceStage" id="cell4"></div>
-        <div class="cell choiceStage" id="cell5"></div>
-        <div class="cell choiceStage" id="cell6"></div>
-        <div class="cell choiceStage" id="cell7"></div>
-        <div class="cell choiceStage" id="cell8"></div>
-        <div class="cell choiceStage" id="cell9"></div>
+        <div class="cell turnedOff" id="cell1"></div>
+        <div class="cell turnedOff" id="cell2"></div>
+        <div class="cell turnedOff" id="cell3"></div>
+        <div class="cell turnedOff" id="cell4"></div>
+        <div class="cell turnedOff" id="cell5"></div>
+        <div class="cell turnedOff" id="cell6"></div>
+        <div class="cell turnedOff" id="cell7"></div>
+        <div class="cell turnedOff" id="cell8"></div>
+        <div class="cell turnedOff" id="cell9"></div>
     </div>
-    <div class="endScreen" id="endScreen">
+    <div class="endScreen shown hidden" id="endScreen">
         <div class="blurLayer"></div>
-        <div class="endScreenContent"></div>
+        <div class="endScreenContent">
+            <div class="playerWins" id="playerWins"></div>
+            <div class="currentScore" id="currentScore"> 
+            </div>
+            <div class="resetAndContBtns">
+                <button class="btnContinue" id="btnContinue">CONTINUE</button>
+                <button class="btnRestart" id="btnRestart">RESTART</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

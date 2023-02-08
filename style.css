@@ -143,8 +143,6 @@ table {
 
 
 body {
-    width: 90vw;
-    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,6 +150,7 @@ body {
 }
 
 .choiceButtonBox{
+    margin-top: 20vh;
     display: flex;
     width: 296px;
     margin-bottom: 34px;
@@ -163,40 +162,44 @@ body {
     width: 100%;
     height: 100px;
     border: none;
-    border-radius: 6px;
-    background-color: rgb(196, 196, 196);
     color: white;
+    border-radius: 6px;
     font-family: 'raleway';
     font-weight: 1000;
     font-style: bold;
     font-size: 70px;
 }
-.choiceX.choiceStage,
-.choiceO.choiceStage {
+.choiceX.turnedOn,
+.choiceO.turnedOn {
     background-color: black;
 }
-.choiceX.choiceStage:hover,
-.choiceO.choiceStage:hover {
+.choiceX.turnedOn:hover,
+.choiceO.turnedOn:hover {
     box-shadow: 0px 0px 10px black;
 }
+.choiceX.turnedOff,
+.choiceO.turnedOff {
+    background-color: rgb(233, 233, 233);
+}
+
 
 .cell {
     width: 100px;
     height: 100px;
-    background-color: grey;
     display: flex;
     justify-content: center;
+    background-color: grey;
     align-items: center;
     font-size: 80px;
     font-family: "Raleway";
 }
-.cell:hover{
+.cell.turnedOff{
+    background-color: rgb(233, 233, 233);
+}
+.cell.turnedOn:hover{
     background-color: rgb(0, 0, 0);
     box-shadow: 0px 0px 6px black;
     color: white;
-}
-.cell.choiceStage{
-    background-color: rgb(233, 233, 233);
 }
 
 .board {
@@ -205,3 +208,75 @@ body {
     grid-template: 100px 100px 100px / 100px 100px 100px;
 
 }
+
+.endScreen.shown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.endScreen.hidden{
+    display:none;
+}
+
+.blurLayer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+}
+.endScreenContent{
+    display: flex;
+    z-index: 1;
+    width: 600px;
+    height: 250px;
+    position: fixed;
+    align-self: center;
+    margin-bottom: 32vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.playerWins {
+    font-family: 'raleway';
+    font-size: 120px;
+    align-content: center;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 6px;
+}
+.currentScore{
+    font-family: 'raleway';
+    font-size: 60px;
+    align-content: center;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 6px;
+    margin-top: 20px;
+}
+.btnContinue,
+.btnRestart{
+    height: 60px;
+    width: 120px;
+    margin: 20px;
+    margin-top: 60px;
+    background-color: black;
+    color: white;
+    font-family: 'raleway';
+    border-radius: 6px;
+    border: none;
+    font-weight:bolder;
+    font-size: 15px;
+    letter-spacing: 2px;
+    
+}
+.btnContinue:hover,
+.btnRestart:hover{
+    box-shadow: 0px 0px 7px black;
+}
+
+
+
